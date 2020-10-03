@@ -1,13 +1,214 @@
-body {
+/* Fonts  */
+@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@200;400;700&display=swap");
+/* CSS RESET */
+* {
+  padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  box-sizing: inherit;
+}
+html {
+  font-size: 62.5%;
+}
+/* Custom Properties */
+:root {
+  --color-primary: #6c63ff;
+  --color-secondary: #3498db;
+  --color-white: #fff;
+}
+.background-color-white {
+  background-color: #fff !important;
+}
+.cp {
+  color: var(--color-primary);
+}
+.rotate {
+  transform: rotateY(180deg);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  box-sizing: border-box;
+  font-family: "Mulish", sans-serif;
+  font-size: 1.6rem;
 }
+body * {
+  font-size: 1.6rem;
+}
+.navbar-img {
+  display: inline-block;
+  margin-top: 1.4rem;
+  padding: 1rem;
+  line-height: 1;
+  width: 5rem;
+  height: 5rem;
+  font-weight: 700;
+  mask-image: url(./images/infinity.svg);
+  background-color: var(--color-primary);
+}
+.nav-text {
+  color: currentColor;
+}
+.nav-text:hover {
+  color: var(--color-primary) !important;
+}
+
+.navbar-brand {
+  font-size: 3rem !important;
+  color: var(--color-primary) !important;
+}
+.navbar a {
+  font-size: 2rem;
+}
+.menu-active {
+  font-weight: 700;
+  border-bottom: 1px solid var(--color-primary) !important;
+  color: var(--color-primary) !important;
+}
+.navbar a:hover {
+  color: var(--color-secondary);
+}
+@media screen and (max-width: 61.93em) {
+  .navbar-brand {
+    font-size: 2.4rem !important;
+  }
+  .menu-active {
+    font-weight: 700;
+  }
+}
+/* Some Additional Styling */
+.custom-title {
+  font-size: 2rem !important;
+  font-weight: 700 !important;
+}
+
+/* Main Page */
+#header {
+  width: 100%;
+  height: 80vh;
+  margin-top: 7rem;
+}
+
+#header h1 {
+  margin-bottom: 1rem;
+  font-size: 5rem;
+  font-weight: 500;
+  color: black;
+}
+#header .brand-name {
+  color: var(--color-primary);
+  font-size: 5rem;
+}
+#header h2 {
+  color: #484848;
+  font-size: 2.3rem;
+}
+#header .btn-get-started {
+  font-size: 1.6rem;
+  font-weight: 500;
+  padding: 1rem 3rem;
+  border: 1px solid var(--color-primary);
+  display: inline-block;
+  border-radius: 5rem;
+  text-decoration: none;
+  color: var(--color-primary);
+}
+#header .btn-get-started:hover {
+  background-color: var(--color-primary);
+  color: #fff;
+}
+.btn-card {
+  font-size: 1.4rem;
+  font-weight: 300;
+  padding: 0.7rem 1.5rem;
+  border: 1px solid var(--color-primary);
+  display: inline-block;
+  border-radius: 5rem;
+  text-decoration: none;
+  color: var(--color-primary);
+}
+.btn-card:hover {
+  background-color: var(--color-primary);
+  color: #fff;
+}
+
+#header .hero-svg {
+  height: 100%;
+  width: 100%;
+  fill: var(--color-primary);
+}
+.animate {
+  animation: moveUpDown 2s infinite ease-in-out alternate-reverse both;
+}
+@keyframes moveUpDown {
+  0% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(10px);
+  }
+}
+/* Form Control */
+.form-control-custom {
+  display: block;
+  width: 100%;
+  min-height: calc(1.5em + 0.75rem + 2px);
+  padding: 0.375rem 0.75rem;
+  outline: none;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  -webkit-appearance: none;
+  appearance: none;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+.form-control-custom:focus {
+  outline: 0.5px solid var(--color-primary);
+}
+.heroImg {
+  width: 100%;
+}
+/* Form Control */
+/* Media Query */
+@media (max-width: 768px) {
+  .heroImg {
+    width: 90%;
+    margin: 4rem auto;
+  }
+  #header h1 {
+    margin-bottom: 0.7rem;
+    font-size: 4rem;
+    font-weight: 500;
+  }
+  #header .brand-name {
+    font-size: 4rem;
+  }
+  #header h2 {
+    font-size: 2.2rem;
+  }
+}
+@media (max-width: 600px) {
+  #header h1 {
+    margin-bottom: 0.7rem;
+    font-size: 3rem;
+    font-weight: 500;
+  }
+  #header .brand-name {
+    font-size: 3rem;
+  }
+  #header h2 {
+    font-size: 2rem;
+  }
+  .heroImg {
+    width: 95%;
+    margin: 2rem auto;
+  }
+  #header {
+    height: 100%;
+  }
+}
+
+/* Media Query */
